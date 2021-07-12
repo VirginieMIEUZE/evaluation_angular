@@ -1,0 +1,15 @@
+.last {
+    color: red;
+}
+
+img {
+    width: 100%;
+}
+
+td:last-of-type {
+    width: 70%;
+}
+
+table {
+    margin-bottom: 50px;
+}

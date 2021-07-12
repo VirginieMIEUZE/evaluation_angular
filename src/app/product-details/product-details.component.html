@@ -1,0 +1,24 @@
+
+<table>
+<tr>
+  <td>
+    <img [src]="oneProduct?.photo" alt="Produit">
+  </td>
+
+  <td>
+    <h2>{{oneProduct?.title}} - {{oneProduct?.price | currency:'EUR'}}</h2>
+    <p>{{oneProduct?.description}}</p>
+    <p>Stock : {{oneProduct?.stock}}
+    <span *ngIf="oneProduct && isTheLast(oneProduct)" [ngClass]="{last: isTheLast(oneProduct)}">/!\ DERNIER PRODUIT DISPONIBLE</span></p>
+    <button class="btn btn-primary" (click)="updateBasket(oneProduct)">Add to Cart</button>
+  </td>
+</tr>
+</table>
+
+<p>Voir nos autres produits : </p>
+<div class="row text-center">
+  <ng-container *ngFor="let product of products | sort:sortKey">
+    <app-product *ngIf="isAvailable(product) && product?.id !== oneProduct?.id" [data]="product"
+                 (addToBasket)="updateBasket($event)"></app-product>
+  </ng-container>
+</div>

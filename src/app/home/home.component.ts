@@ -32,7 +32,7 @@ export class HomeComponent {
 
   updateTotal(): void {
     this.customerService.getTotal().subscribe(total => {
-      this.total = total;
+    this.total = total;
     });
   }
 

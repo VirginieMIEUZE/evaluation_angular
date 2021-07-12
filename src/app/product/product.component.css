@@ -1,3 +1,7 @@
 .last {
   background-color: rgba(255, 0, 0, 0.4);
 }
+
+a {
+  margin-left: 5px;
+}
