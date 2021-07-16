@@ -2,6 +2,11 @@
   background-color: rgba(255, 0, 0, 0.4);
 }
 
+.noStock {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
 a {
   margin-left: 5px;
 }

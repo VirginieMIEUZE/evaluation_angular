@@ -52,7 +52,6 @@ export class ProductDetailsComponent implements OnInit {
     return this.productService.isAvailable(product);
   }
 
-  
 
 
 

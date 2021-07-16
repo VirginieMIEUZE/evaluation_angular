@@ -15,10 +15,9 @@
 </tr>
 </table>
 
-<p>Voir nos autres produits : </p>
 <div class="row text-center">
   <ng-container *ngFor="let product of products | sort:sortKey">
-    <app-product *ngIf="isAvailable(product) && product?.id !== oneProduct?.id" [data]="product"
+    <app-product *ngIf="product?.id !== oneProduct?.id" [data]="product" 
                  (addToBasket)="updateBasket($event)"></app-product>
   </ng-container>
 </div>

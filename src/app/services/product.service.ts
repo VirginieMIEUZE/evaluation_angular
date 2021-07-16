@@ -32,4 +32,8 @@ export class ProductService {
     product.stock -= 1;
   }
 
+  moreCheap(product1: Product, product2: Product): boolean {
+    return product1 > product2
+  }
+
 }
